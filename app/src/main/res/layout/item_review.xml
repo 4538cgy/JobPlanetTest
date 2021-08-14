@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="itemcompany"
+            type="com.example.jobplanettest.data.TestDataResponse.Item" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/item_company_imageview_logo_path"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                app:layout_constraintTop_toTopOf="@+id/item_company_imageview_logo_path"
+                app:layout_constraintLeft_toRightOf="@+id/item_company_imageview_logo_path"
+                android:id="@+id/item_comany_imageview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{itemcompany.name}"
+                />
+
+            <TextView
+                android:id="@+id/item_company_textview_rate_total_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_star_24"
+                app:layout_constraintTop_toBottomOf="@+id/item_comany_imageview_name"
+                app:layout_constraintLeft_toRightOf="@+id/item_company_imageview_logo_path"
+                android:text="@{itemcompany.rateTotalAvg.toString()}"
+                />
+
+            <TextView
+                android:id="@+id/item_company_textview_industry_name"
+                app:layout_constraintTop_toTopOf="@+id/item_company_textview_rate_total_avg"
+                app:layout_constraintLeft_toRightOf="@+id/item_company_textview_rate_total_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{itemcompany.industryName}"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/item_company_textview_review_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{itemcompany.reviewSummary}"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inner_container_advantage"
+                app:layout_constraintTop_toBottomOf="@+id/item_company_textview_review_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/item_company_textview_advantages_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="장점"
+                    />
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="@+id/item_company_textview_advantages_title"
+                    app:layout_constraintLeft_toRightOf="@+id/item_company_textview_advantages_title"
+                    android:id="@+id/item_company_textview_pros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{itemcompany.pros}"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toBottomOf="@+id/inner_container_advantage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/item_company_textview_weekness_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="단점"
+                    />
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="@+id/item_company_textview_weekness_title"
+                    app:layout_constraintLeft_toRightOf="@+id/item_company_textview_weekness_title"
+                    android:id="@+id/item_company_textview_cons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{itemcompany.cons}"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+</layout>
