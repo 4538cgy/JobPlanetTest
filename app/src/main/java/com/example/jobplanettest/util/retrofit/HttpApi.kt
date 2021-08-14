@@ -1,13 +1,23 @@
 package com.example.jobplanettest.util.retrofit
 
-import com.example.jobplanettest.R
+import com.example.jobplanettest.TEST_DATA_BASE_URL
+import com.example.jobplanettest.data.TestDataResponse
 import okhttp3.OkHttpClient
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
+
 class HttpApi {
-    private val HttpApiInterface : TestData
-    private val baseUrl : String = R.string.test_data_base_url.toString()
+    private val httpApiInterface : TestData
+    private val baseUrl : String = TEST_DATA_BASE_URL
+
+    companion object{
+        val httpApi = HttpApi()
+    }
+
+
 
     init {
         val retrofit = Retrofit.Builder()
@@ -16,6 +26,11 @@ class HttpApi {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        HttpApiInterface = retrofit.create(TestData::class.java)
+        httpApiInterface = retrofit.create(TestData::class.java)
+    }
+
+    fun getTestData() : Call<TestDataResponse>{
+        return httpApiInterface.getTestData()
     }
 }
+

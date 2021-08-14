@@ -1,8 +1,9 @@
 package com.example.jobplanettest.data
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-data class TestData(
+data class TestDataResponse(
     @SerializedName("minimum_interviews")
     val minimumInterviews : Long ?= null,
     @SerializedName("total_page")
@@ -18,11 +19,10 @@ data class TestData(
     @SerializedName("page_size")
     val pageSize : Int ? = null,
     @SerializedName("minimum_salaries")
-    val minimumSalaries : Int ? = null,
+    val minimumSalaries : Int ? = null
 
-    val additinalProperties : Map<String,Object> = hashMapOf(),
 
-) {
+) : Serializable {
     data class Item(
         @SerializedName("ranking")
         val ranking : Int ? = null,
@@ -71,10 +71,9 @@ data class TestData(
         @SerializedName("data")
         val data : String ? = null,
         @SerializedName("smb")
-        val smb : ArrayList<Object> = arrayListOf(),
+        val smb : ArrayList<Object> = arrayListOf()
 
-        val additionalProperties : Map<String,Object> = hashMapOf()
-    )
+    ): Serializable
 
     data class Theme(
         @SerializedName("color")
@@ -84,8 +83,7 @@ data class TestData(
         @SerializedName("id")
         val id : Int ? = null,
         @SerializedName("title")
-        val title : String ? = null,
+        val title : String ? = null
 
-        val additionalProperties : Map<String,Object> = hashMapOf(),
-    )
+    ): Serializable
 }
