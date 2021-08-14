@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JobPlanetTest</string>
+    <string name="test_data_base_url">https://jpassets.jobplanet.co.kr/mobile-config</string>
 </resources>
