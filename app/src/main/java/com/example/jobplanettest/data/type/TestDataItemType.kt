@@ -1,7 +1,5 @@
 package com.example.jobplanettest.data.type
 
-sealed class TestDataItemType {
-    object CELL_TYPE_COMPANY : TestDataItemType()
-    object CELL_TYPE_HORIZONTAL_THEME : TestDataItemType()
-    object CELL_TYPE_REVIEW : TestDataItemType()
-}
+const val CELL_TYPE_COMPANY = 0
+const val CELL_TYPE_HORIZONTAL_THEME = 1
+const val CELL_TYPE_REVIEW = 2

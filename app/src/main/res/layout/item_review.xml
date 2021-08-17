@@ -4,7 +4,7 @@
 
     <data>
         <variable
-            name="itemcompany"
+            name="itemreview"
             type="com.example.jobplanettest.data.TestDataResponse.Item" />
     </data>
 
@@ -33,7 +33,7 @@
                 android:id="@+id/item_comany_imageview_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{itemcompany.name}"
+                android:text="@{itemreview.name}"
                 />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:drawableLeft="@drawable/ic_baseline_star_24"
                 app:layout_constraintTop_toBottomOf="@+id/item_comany_imageview_name"
                 app:layout_constraintLeft_toRightOf="@+id/item_company_imageview_logo_path"
-                android:text="@{itemcompany.rateTotalAvg.toString()}"
+                android:text="@{itemreview.rateTotalAvg.toString()}"
                 />
 
             <TextView
@@ -52,7 +52,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/item_company_textview_rate_total_avg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{itemcompany.industryName}"
+                android:text="@{itemreview.industryName}"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -68,7 +68,7 @@
                 android:id="@+id/item_company_textview_review_summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{itemcompany.reviewSummary}"
+                android:text="@{itemreview.reviewSummary}"
                 />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -92,7 +92,7 @@
                     android:id="@+id/item_company_textview_pros"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{itemcompany.pros}"
+                    android:text="@{itemreview.pros}"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -117,7 +117,7 @@
                     android:id="@+id/item_company_textview_cons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{itemcompany.cons}"
+                    android:text="@{itemreview.cons}"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
