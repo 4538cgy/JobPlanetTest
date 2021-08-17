@@ -9,17 +9,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.example.jobplanettest.viewmodel.MainViewModel
 
-abstract class BaseActivity<B : ViewDataBinding>(val layoutId : Int) : AppCompatActivity() {
+abstract class BaseActivity<B : ViewDataBinding>(val layoutId: Int) : AppCompatActivity() {
 
-    lateinit var binding : B
-    lateinit var rootContext : Context
+    lateinit var binding: B
+    lateinit var rootContext: Context
 
-    val mainViewModel : MainViewModel by viewModels()
+    val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this,layoutId)
+        binding = DataBindingUtil.setContentView(this, layoutId)
         binding.lifecycleOwner = this
         rootContext = binding.root.context
     }

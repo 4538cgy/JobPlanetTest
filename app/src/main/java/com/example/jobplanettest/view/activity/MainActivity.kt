@@ -18,18 +18,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
             activityMainRecyclerview.apply {
                 adapter = MultiViewAdapter(emptyList())
-                layoutManager = LinearLayoutManager(binding.root.context,LinearLayoutManager.VERTICAL,false)
+                layoutManager =
+                    LinearLayoutManager(binding.root.context, LinearLayoutManager.VERTICAL, false)
             }
-
         }
-
-
-
         mainViewModel.getTestData()
-        mainViewModel.testData.observe(this , Observer {
-            it?.let{
+        mainViewModel.testData.observe(this, Observer {
+            it?.let {
                 (binding.activityMainRecyclerview.adapter as MultiViewAdapter).updateData(it.items)
-            }?.run{
+            }?.run {
             }
 
         })

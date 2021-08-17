@@ -14,24 +14,23 @@ import retrofit2.Response
 
 class TestDataRepository {
 
-    companion object{
+    companion object {
         val testDataRepository = TestDataRepository()
     }
 
     @ExperimentalCoroutinesApi
     fun getTestData() = callbackFlow<TestDataResponse?> {
-        val eventListener = httpApi.getTestData().enqueue(object : Callback<TestDataResponse>{
-            override fun onResponse(call: Call<TestDataResponse>, response: Response<TestDataResponse>) {
-
-
+        val eventListener = httpApi.getTestData().enqueue(object : Callback<TestDataResponse> {
+            override fun onResponse(
+                call: Call<TestDataResponse>,
+                response: Response<TestDataResponse>
+            ) {
                 response.body()?.let {
-                    //받아온 데이터 전달
                     this@callbackFlow.trySendBlocking(response.body()!!)
                 }
             }
-
             override fun onFailure(call: Call<TestDataResponse>, t: Throwable) {
-               this@callbackFlow.trySendBlocking(null)
+                this@callbackFlow.trySendBlocking(null)
             }
 
         })

@@ -5,6 +5,7 @@
     tools:context=".view.activity.MainActivity">
 
     <data>
+
         <variable
             name="activitymain"
             type="com.example.jobplanettest.view.activity.MainActivity" />
@@ -12,15 +13,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/activity_main_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
+            android:layout_height="match_parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

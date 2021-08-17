@@ -13,7 +13,7 @@ class MainViewModel : ViewModel() {
 
     val testData = MutableLiveData<TestDataResponse>()
 
-    fun getTestData(){
+    fun getTestData() {
         viewModelScope.launch {
             testDataRepository.getTestData().collect {
                 testData.postValue(it)

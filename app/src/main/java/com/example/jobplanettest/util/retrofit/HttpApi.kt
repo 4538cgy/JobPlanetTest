@@ -8,16 +8,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-
 class HttpApi {
-    private val httpApiInterface : TestData
-    private val baseUrl : String = TEST_DATA_BASE_URL
+    private val httpApiInterface: TestData
+    private val baseUrl: String = TEST_DATA_BASE_URL
 
-    companion object{
+    companion object {
         val httpApi = HttpApi()
     }
-
-
 
     init {
         val retrofit = Retrofit.Builder()
@@ -29,7 +26,7 @@ class HttpApi {
         httpApiInterface = retrofit.create(TestData::class.java)
     }
 
-    fun getTestData() : Call<TestDataResponse>{
+    fun getTestData(): Call<TestDataResponse> {
         return httpApiInterface.getTestData()
     }
 }

@@ -7,8 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 
 interface TestData {
-
     @Headers("Accept: application/json")
     @GET(MOBILE_CONFIG_TEST_DATA)
-    fun getTestData() : Call<TestDataResponse>
+    fun getTestData(): Call<TestDataResponse>
 }

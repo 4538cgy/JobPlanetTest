@@ -5,85 +5,85 @@ import java.io.Serializable
 
 data class TestDataResponse(
     @SerializedName("minimum_interviews")
-    val minimumInterviews : Long ?= null,
+    val minimumInterviews: Long? = null,
     @SerializedName("total_page")
-    val totalPage : Long ? = null,
+    val totalPage: Long? = null,
     @SerializedName("minimum_reviews")
-    val minimumReviews : Long ? = null,
+    val minimumReviews: Long? = null,
     @SerializedName("total_count")
-    val totalCount : Long ? = null,
+    val totalCount: Long? = null,
     @SerializedName("items")
-    val items : ArrayList<Item> = arrayListOf(),
+    val items: ArrayList<Item> = arrayListOf(),
     @SerializedName("page")
-    val page : Int ? = null,
+    val page: Int? = null,
     @SerializedName("page_size")
-    val pageSize : Int ? = null,
+    val pageSize: Int? = null,
     @SerializedName("minimum_salaries")
-    val minimumSalaries : Int ? = null
+    val minimumSalaries: Int? = null
 
 
 ) : Serializable {
     data class Item(
         @SerializedName("ranking")
-        val ranking : Int ? = null,
+        val ranking: Int? = null,
         @SerializedName("cell_type")
-        val cellType : String ? = null,
+        val cellType: String? = null,
         @SerializedName("interview_difficulty")
-        val interviewDifficulty : Double ? = null,
+        val interviewDifficulty: Double? = null,
         @SerializedName("name")
-        val name : String ? = null,
+        val name: String? = null,
         @SerializedName("salary_avg")
-        val salaryAvg : Long ? = null,
+        val salaryAvg: Long? = null,
         @SerializedName("web_site")
-        val webSite : String ? = null,
+        val webSite: String? = null,
         @SerializedName("logo_path")
-        val logoPath : String ? = null,
+        val logoPath: String? = null,
         @SerializedName("interview_question")
-        val interviewQuestion : String ? = null,
+        val interviewQuestion: String? = null,
         @SerializedName("company_id")
-        val companyId : Long ? = null,
+        val companyId: Long? = null,
         @SerializedName("has_job_posting")
-        val hasJobPosting : Boolean ? = null,
+        val hasJobPosting: Boolean? = null,
         @SerializedName("rate_total_avg")
-        val rateTotalAvg : Double ? = null,
+        val rateTotalAvg: Double? = null,
         @SerializedName("industry_id")
-        val industryId : Long ? = null,
+        val industryId: Long? = null,
         @SerializedName("review_summary")
-        val reviewSummary : String ? = null,
+        val reviewSummary: String? = null,
         @SerializedName("type")
-        val type : String ? = null,
+        val type: String? = null,
         @SerializedName("simple_desc")
-        val simpleDesc : String ? = null,
+        val simpleDesc: String? = null,
         @SerializedName("industry_name")
-        val industryName : String ? = null,
+        val industryName: String? = null,
         @SerializedName("count")
-        val count : Int ? = null,
+        val count: Int? = null,
         @SerializedName("themes")
-        val themes : ArrayList<Theme> = arrayListOf(),
+        val themes: ArrayList<Theme> = arrayListOf(),
         @SerializedName("cons")
-        val cons : String ? = null,
+        val cons: String? = null,
         @SerializedName("days_ago")
-        val daysAgo : Int ? = null,
+        val daysAgo: Int? = null,
         @SerializedName("pros")
-        val pros : String ? = null,
+        val pros: String? = null,
         @SerializedName("occupation_name")
-        val occupationName : String ? = null,
+        val occupationName: String? = null,
         @SerializedName("data")
-        val data : String ? = null,
+        val data: String? = null,
         @SerializedName("smb")
-        val smb : ArrayList<Object> = arrayListOf()
+        val smb: ArrayList<Object> = arrayListOf()
 
-    ): Serializable
+    ) : Serializable
 
     data class Theme(
         @SerializedName("color")
-        val color : String ? = null,
+        val color: String? = null,
         @SerializedName("cover_image")
-        val coverImage : String ? = null,
+        val coverImage: String? = null,
         @SerializedName("id")
-        val id : Int ? = null,
+        val id: Int? = null,
         @SerializedName("title")
-        val title : String ? = null
+        val title: String? = null
 
-    ): Serializable
+    ) : Serializable
 }
