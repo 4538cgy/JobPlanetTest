@@ -6,7 +6,7 @@
 
         <variable
             name="itemhorizontalthemeinneritem"
-            type="com.example.jobplanettest.data.TestDataResponse.Theme" />
+            type="com.example.jobplanettest.adapter.model.CELL_TYPE_HORIZONTAL_THEME" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

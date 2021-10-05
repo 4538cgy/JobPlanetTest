@@ -9,6 +9,7 @@ import com.example.jobplanettest.R
 import com.example.jobplanettest.adapter.base.BaseViewHolder
 import com.example.jobplanettest.adapter.flexviewholder.CompanyFlexViewHolder
 import com.example.jobplanettest.adapter.viewholder.EmptyViewHolder
+import com.example.jobplanettest.base.BaseItemModel
 import com.example.jobplanettest.data.TestDataResponse
 import java.lang.Exception
 
@@ -18,7 +19,8 @@ class ItemType {
 
         CELL_TYPE_COMPANY(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_company),
         CELL_TYPE_HORIZONTAL_THEME(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_horizontal_theme),
-        CELL_TYPE_REVIEW(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_review);
+        CELL_TYPE_REVIEW(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_review),
+        NOT_SUPPORT(BaseItemModel.class, VHNotSupport.class, R.layout.vh_not_support_item);
 
 
         private var modelName: Class<*>? = null

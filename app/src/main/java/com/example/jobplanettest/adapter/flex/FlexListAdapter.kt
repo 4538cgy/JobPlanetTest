@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.jobplanettest.adapter.base.BaseListAdapter
 import com.example.jobplanettest.adapter.base.BaseViewHolder
-import com.example.jobplanettest.data.base.BaseItemModel
+import com.example.jobplanettest.base.BaseItemModel
 import com.example.jobplanettest.data.type.ItemType
 
 open class FlexListAdapter : BaseListAdapter() {

@@ -5,4 +5,5 @@
     <string name="pros">장점</string>
     <string name="cons">단점</string>
     <string name="interview_title">면접질문</string>
+    <string name="text_go_to_update">업데이트 바로가기</string>
 </resources>

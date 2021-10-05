@@ -9,6 +9,12 @@ import com.example.jobplanettest.adapter.base.BaseViewHolder
  **/
 class EmptyViewHolder(context: Context) : BaseViewHolder<Any>(LinearLayout(context)) {
 
-    override fun onItemClick() {}
-    override fun onBindView(item: Any) {}
+
+    override fun onBindView(item: Any?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onItemClick() {
+        TODO("Not yet implemented")
+    }
 }
