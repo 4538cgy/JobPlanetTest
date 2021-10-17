@@ -7,8 +7,8 @@
         <entry key="app/src/main/res/layout/item_company.xml" value="0.2" />
         <entry key="app/src/main/res/layout/item_horizontal_theme.xml" value="0.2" />
         <entry key="app/src/main/res/layout/item_horizontal_theme_inner_item.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/item_review.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/layout_item_bottom_divider.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/item_review.xml" value="0.1712962962962963" />
+        <entry key="app/src/main/res/layout/layout_item_bottom_divider.xml" value="0.1712962962962963" />
         <entry key="app/src/main/res/layout/vh_not_support_item.xml" value="0.1" />
       </map>
     </option>

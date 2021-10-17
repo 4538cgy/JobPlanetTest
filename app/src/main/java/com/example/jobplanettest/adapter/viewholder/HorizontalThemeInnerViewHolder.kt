@@ -8,7 +8,7 @@ class HorizontalThemeInnerViewHolder(val binding: ItemHorizontalThemeInnerItemBi
     RecyclerView.ViewHolder(binding.root) {
     fun bind(item: TestDataResponse.Theme) {
         binding.apply {
-            itemhorizontalthemeinneritem = item
+            //itemhorizontalthemeinneritem = item
         }
     }
 }

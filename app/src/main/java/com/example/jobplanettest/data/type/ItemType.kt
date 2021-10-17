@@ -8,9 +8,11 @@ import androidx.databinding.ViewDataBinding
 import com.example.jobplanettest.R
 import com.example.jobplanettest.adapter.base.BaseViewHolder
 import com.example.jobplanettest.adapter.flexviewholder.CompanyFlexViewHolder
+import com.example.jobplanettest.adapter.flexviewholder.HorizontalFlexThemeViewHolder
+import com.example.jobplanettest.adapter.flexviewholder.ReviewFlexViewHolder
+import com.example.jobplanettest.adapter.flexviewholder.VHNotSupport
 import com.example.jobplanettest.adapter.viewholder.EmptyViewHolder
 import com.example.jobplanettest.base.BaseItemModel
-import com.example.jobplanettest.data.TestDataResponse
 import java.lang.Exception
 
 class ItemType {
@@ -18,9 +20,9 @@ class ItemType {
     enum class Type(model: Class<*>? , viewHolder: Class<out BaseViewHolder<*>?>?, resource : Int) {
 
         CELL_TYPE_COMPANY(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_company),
-        CELL_TYPE_HORIZONTAL_THEME(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_horizontal_theme),
-        CELL_TYPE_REVIEW(CELL_TYPE_COMPANY::class.java,CompanyFlexViewHolder::class.java, R.layout.item_review),
-        NOT_SUPPORT(BaseItemModel.class, VHNotSupport.class, R.layout.vh_not_support_item);
+        CELL_TYPE_HORIZONTAL_THEME(CELL_TYPE_HORIZONTAL_THEME::class.java,HorizontalFlexThemeViewHolder::class.java, R.layout.item_horizontal_theme),
+        CELL_TYPE_REVIEW(CELL_TYPE_REVIEW::class.java,ReviewFlexViewHolder::class.java, R.layout.item_review),
+        NOT_SUPPORT(BaseItemModel::class.java, VHNotSupport::class.java, R.layout.vh_not_support_item);
 
 
         private var modelName: Class<*>? = null
