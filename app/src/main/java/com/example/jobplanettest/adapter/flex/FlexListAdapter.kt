@@ -7,7 +7,7 @@ import com.example.jobplanettest.adapter.base.BaseViewHolder
 import com.example.jobplanettest.base.BaseItemModel
 import com.example.jobplanettest.data.type.ItemType
 
-open class FlexListAdapter : BaseListAdapter() {
+open class FlexListAdapter(emptyList: List<Any>) : BaseListAdapter() {
 
     var items = ArrayList<BaseItemModel>()
 

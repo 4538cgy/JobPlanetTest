@@ -7,7 +7,7 @@ import com.example.jobplanettest.databinding.ItemReviewBinding
 class ReviewViewHolder(val binding: ItemReviewBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(item: TestDataResponse.Item) {
         binding.apply {
-            itemreview = item
+            //itemreview = item
         }
     }
 }

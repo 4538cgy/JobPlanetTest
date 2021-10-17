@@ -41,7 +41,7 @@ data class CELL_TYPE_COMPANY(
     @SerializedName("count")
     val count: Int? = null,
     @SerializedName("themes")
-    val themes: ArrayList<TestDataResponse.Theme> = arrayListOf(),
+    val themes: ArrayList<CELL_TYPE_HORIZONTAL_THEME> = arrayListOf(),
     @SerializedName("cons")
     val cons: String? = null,
     @SerializedName("days_ago")
